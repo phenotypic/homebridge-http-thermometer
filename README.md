@@ -27,10 +27,10 @@ homebridge-http-thermometer exposes a thermometer to HomeKit and monitors it via
 ### Core
 | Key | Description | Default |
 | --- | --- | --- |
-| `accessory` | Must be `Thermostat` | N/A |
+| `accessory` | Must be `Thermometer` | N/A |
 | `name` | Name to appear in the Home app | N/A |
-| `apiroute` | Root URL of your Thermostat device (excluding the rest of the requests) | N/A |
-| `pollInterval` _(optional)_ | Time (in seconds) between when homebridge will check the `/status` of your thermostat | `60` |
+| `apiroute` | Root URL of your thermometer (excluding the rest of the requests) | N/A |
+| `pollInterval` _(optional)_ | Time (in seconds) between when homebridge will check the `/status` of your thermometer | `60` |
 
 ### Additional options
 | Key | Description | Default |
@@ -39,7 +39,7 @@ homebridge-http-thermometer exposes a thermometer to HomeKit and monitors it via
 | `http_method` _(optional)_ | The HTTP method used to communicate with the thermostat | `GET` |
 | `username` _(optional)_ | Username if HTTP authentication is enabled | N/A |
 | `password` _(optional)_ | Password if HTTP authentication is enabled | N/A |
-| `model` _(optional)_ | Appears under the "Model" field for the device | `homebridge-web-thermostat` |
+| `model` _(optional)_ | Appears under the "Model" field for the device | `homebridge-http-thermometer` |
 | `serial` _(optional)_ | Appears under the "Serial" field for the device | apiroute |
 | `manufacturer` _(optional)_ | Appears under the "Manufacturer" field for the device | `Tom Rodrigues` |
 

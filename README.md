@@ -1,10 +1,10 @@
 # homebridge-http-thermometer
 
-#### Homebridge plugin to monitor a web-based thermometer
+[![npm](https://img.shields.io/npm/dt/homebridge-http-thermometer.svg)](https://www.npmjs.com/package/homebridge-http-thermometer) [![npm](https://img.shields.io/npm/v/homebridge-http-thermometer.svg)](https://www.npmjs.com/package/homebridge-http-thermometer)
 
 ## Description
 
-homebridge-http-thermometer exposes a thermometer to HomeKit and monitors it via HTTP requests. The plugin will poll your thermometer at regular intervals and present you with this information.
+This [homebridge](https://github.com/nfarina/homebridge) plugin exposes a web-based thermometer to to Apple's [HomeKit](http://www.apple.com/ios/home/). Using simple HTTP requests, you can poll your home's temperature.
 
 ## Installation
 

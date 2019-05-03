@@ -4,7 +4,7 @@
 
 ## Description
 
-This [homebridge](https://github.com/nfarina/homebridge) plugin exposes a web-based thermometer to to Apple's [HomeKit](http://www.apple.com/ios/home/). Using simple HTTP requests, you can poll your home's temperature.
+This [homebridge](https://github.com/nfarina/homebridge) plugin exposes a web-based thermometer to Apple's [HomeKit](http://www.apple.com/ios/home/). Using simple HTTP requests, you can poll your home's temperature.
 
 ## Installation
 

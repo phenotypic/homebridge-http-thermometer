@@ -63,6 +63,7 @@ Thermometer.prototype = {
     this._httpRequest(url, '', this.http_method, function(error, response, responseBody) {
       if (error) {
         this.log('[!] Error getting status: %s', error.message);
+        this.service.getCharacteristic(Characteristic.CurrentTemperature).updateValue(new Error("Polling failed"));
         callback(error);
       } else {
         this.log('[*] Thermometer response:', responseBody);

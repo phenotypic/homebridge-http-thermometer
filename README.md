@@ -40,7 +40,7 @@ This [homebridge](https://github.com/nfarina/homebridge) plugin exposes a web-ba
 | `username` _(optional)_ | Username if HTTP authentication is enabled | N/A |
 | `password` _(optional)_ | Password if HTTP authentication is enabled | N/A |
 | `model` _(optional)_ | Appears under the _Model_ field for the accessory | `homebridge-http-thermometer` |
-| `serial` _(optional)_ | Appears under the _Serial_ field for the accessory | apiroute |
+| `serial` _(optional)_ | Appears under the _Serial_ field for the accessory | N/A |
 | `manufacturer` _(optional)_ | Appears under the _Manufacturer_ field for the accessory | `Tom Rodrigues` |
 
 ## API Interfacing

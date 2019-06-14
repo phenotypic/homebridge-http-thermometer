@@ -1,10 +1,10 @@
 {
   "name": "homebridge-http-thermometer",
-  "version": "1.0.5",
-  "description": "Homebridge plugin to monitor a web-based thermometer",
+  "version": "1.0.6",
+  "description": "Homebridge plugin for a web-based thermometer",
   "main": "index.js",
   "dependencies": {
-    "request": "^2.65.0"
+    "request": "^2.88.0"
   },
   "engines": {
     "homebridge": "^0.4.46",
@@ -20,7 +20,7 @@
   "keywords": [
     "homebridge-plugin"
   ],
-  "author": "Tom Rodrigues <tommyrodrigues2001@gmail.com>",
+  "author": "Tom Rodrigues",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Tommrodrigues/homebridge-http-thermometer/issues"

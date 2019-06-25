@@ -32,7 +32,7 @@ function Thermometer (log, config) {
     }
   }
 
-  this.log(this.name, this.apiroute)
+  this.log('%s initialized', this.name)
 
   this.service = new Service.TemperatureSensor(this.name)
 }
@@ -64,7 +64,7 @@ Thermometer.prototype = {
 
     this._httpRequest(url, '', this.http_method, function (error, response, responseBody) {
       if (error) {
-        this.log('[!] Error getting status: %s', error.message)
+        this.log.warn('[!] Error getting status: %s', error.message)
         this.service.getCharacteristic(Characteristic.CurrentTemperature).updateValue(new Error('Polling failed'))
         callback(error)
       } else {

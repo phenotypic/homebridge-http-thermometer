@@ -32,8 +32,6 @@ function Thermometer (log, config) {
     }
   }
 
-  this.log('%s initialized', this.name)
-
   this.service = new Service.TemperatureSensor(this.name)
 }
 
@@ -60,18 +58,18 @@ Thermometer.prototype = {
 
   _getStatus: function (callback) {
     var url = this.apiroute + '/status'
-    this.log('[+] Getting status: %s', url)
+    this.log('Getting status: %s', url)
 
     this._httpRequest(url, '', this.http_method, function (error, response, responseBody) {
       if (error) {
-        this.log.warn('[!] Error getting status: %s', error.message)
+        this.log.warn('Error getting status: %s', error.message)
         this.service.getCharacteristic(Characteristic.CurrentTemperature).updateValue(new Error('Polling failed'))
         callback(error)
       } else {
-        this.log('[*] Thermometer response: %s', responseBody)
+        this.log('Thermometer response: %s', responseBody)
         var json = JSON.parse(responseBody)
         this.service.getCharacteristic(Characteristic.CurrentTemperature).updateValue(json.currentTemperature)
-        this.log('[*] Updated CurrentTemperature: %s', json.currentTemperature)
+        this.log('Updated CurrentTemperature: %s', json.currentTemperature)
         callback()
       }
     }.bind(this))

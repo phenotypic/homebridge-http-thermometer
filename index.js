@@ -1,6 +1,6 @@
 var Service, Characteristic
-const request = require('request')
 const packageJson = require('./package.json')
+const request = require('request')
 
 module.exports = function (homebridge) {
   Service = homebridge.hap.Service
@@ -13,7 +13,7 @@ function Thermometer (log, config) {
 
   this.name = config.name
   this.apiroute = config.apiroute
-  this.pollInterval = config.pollInterval || 60
+  this.pollInterval = config.pollInterval || 300
 
   this.manufacturer = config.manufacturer || packageJson.author.name
   this.serial = config.serial || packageJson.version

@@ -30,11 +30,11 @@ This [homebridge](https://github.com/nfarina/homebridge) plugin exposes a web-ba
 | `accessory` | Must be `Thermometer` | N/A |
 | `name` | Name to appear in the Home app | N/A |
 | `apiroute` | Root URL of your device | N/A |
-| `pollInterval` _(optional)_ | Time (in seconds) between device polls | `60` |
 
 ### Additional options
 | Key | Description | Default |
 | --- | --- | --- |
+| `pollInterval` _(optional)_ | Time (in seconds) between device polls | `300` |
 | `timeout` _(optional)_ | Time (in milliseconds) until the accessory will be marked as _Not Responding_ if it is unreachable | `3000` |
 | `http_method` _(optional)_ | HTTP method used to communicate with the device | `GET` |
 | `username` _(optional)_ | Username if HTTP authentication is enabled | N/A |

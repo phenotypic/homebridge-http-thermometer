@@ -1,6 +1,6 @@
 {
   "name": "homebridge-http-thermometer",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Homebridge plugin for a web-based thermometer",
   "main": "index.js",
   "dependencies": {

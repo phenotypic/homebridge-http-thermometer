@@ -58,7 +58,7 @@ Thermometer.prototype = {
 
   _getStatus: function (callback) {
     var url = this.apiroute + '/status'
-    this.log('Getting status: %s', url)
+    this.log.debug('Getting status: %s', url)
 
     this._httpRequest(url, '', this.http_method, function (error, response, responseBody) {
       if (error) {
@@ -66,10 +66,10 @@ Thermometer.prototype = {
         this.service.getCharacteristic(Characteristic.CurrentTemperature).updateValue(new Error('Polling failed'))
         callback(error)
       } else {
-        this.log('Thermometer response: %s', responseBody)
+        this.log.debug('Device response: %s', responseBody)
         var json = JSON.parse(responseBody)
         this.service.getCharacteristic(Characteristic.CurrentTemperature).updateValue(json.currentTemperature)
-        this.log('Updated CurrentTemperature: %s', json.currentTemperature)
+        this.log('Updated CurrentTemperature to: %s', json.currentTemperature)
         callback()
       }
     }.bind(this))

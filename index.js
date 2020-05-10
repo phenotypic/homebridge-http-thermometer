@@ -69,7 +69,7 @@ Thermometer.prototype = {
         this.log.debug('Device response: %s', responseBody)
         var json = JSON.parse(responseBody)
         this.service.getCharacteristic(Characteristic.CurrentTemperature).updateValue(json.currentTemperature)
-        this.log('Updated CurrentTemperature to: %s', json.currentTemperature)
+        this.log.debug('Updated CurrentTemperature to: %s', json.currentTemperature)
         callback()
       }
     }.bind(this))

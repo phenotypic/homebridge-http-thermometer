@@ -15,15 +15,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Tommrodrigues/homebridge-http-thermometer.git"
+    "url": "git+https://github.com/phenotypic/homebridge-http-thermometer.git"
   },
   "keywords": [
     "homebridge-plugin"
   ],
-  "author": "Tom Rodrigues",
+  "author": "phenotypic",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Tommrodrigues/homebridge-http-thermometer/issues"
+    "url": "https://github.com/phenotypic/homebridge-http-thermometer/issues"
   },
-  "homepage": "https://github.com/Tommrodrigues/homebridge-http-thermometer#readme"
+  "homepage": "https://github.com/phenotypic/homebridge-http-thermometer#readme"
 }

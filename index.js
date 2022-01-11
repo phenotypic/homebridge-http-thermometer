@@ -67,10 +67,14 @@ Thermometer.prototype = {
         callback(error)
       } else {
         this.log.debug('Device response: %s', responseBody)
-        var json = JSON.parse(responseBody)
-        this.service.getCharacteristic(Characteristic.CurrentTemperature).updateValue(json.currentTemperature)
-        this.log.debug('Updated CurrentTemperature to: %s', json.currentTemperature)
-        callback()
+        try {
+          var json = JSON.parse(responseBody)
+          this.service.getCharacteristic(Characteristic.CurrentTemperature).updateValue(json.currentTemperature)
+          this.log.debug('Updated CurrentTemperature to: %s', json.currentTemperature)
+          callback()
+        } catch (e) {
+          this.log.warn('Error parsing status: %s', e.message)
+        }
       }
     }.bind(this))
   },

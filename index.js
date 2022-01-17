@@ -1,4 +1,4 @@
-var Service, Characteristic
+let Service, Characteristic
 const packageJson = require('./package.json')
 const request = require('request')
 
@@ -57,7 +57,7 @@ Thermometer.prototype = {
   },
 
   _getStatus: function (callback) {
-    var url = this.apiroute + '/status'
+    const url = this.apiroute + '/status'
     this.log.debug('Getting status: %s', url)
 
     this._httpRequest(url, '', this.http_method, function (error, response, responseBody) {
@@ -68,7 +68,7 @@ Thermometer.prototype = {
       } else {
         this.log.debug('Device response: %s', responseBody)
         try {
-          var json = JSON.parse(responseBody)
+          const json = JSON.parse(responseBody)
           this.service.getCharacteristic(Characteristic.CurrentTemperature).updateValue(json.currentTemperature)
           this.log.debug('Updated CurrentTemperature to: %s', json.currentTemperature)
           callback()
